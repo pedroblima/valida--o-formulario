@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { BsCheckLg } from 'react-icons/bs'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import axios from 'axios'
+import professoresValidator from '@/validators/professoresValidator'
 
 const form = () => {
 
@@ -23,20 +24,20 @@ const form = () => {
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome: </Form.Label>
-                    <Form.Control type="text" {...register('nome')} />
+                    <Form.Control type="text" {...register('nome', professoresValidator.nome())} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="cpf">
                     <Form.Label>CPF: </Form.Label>
-                    <Form.Control type="text" {...register('cpf')} />
+                    <Form.Control type="text" {...register('cpf', professoresValidator.cpf())} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="matricula">
                     <Form.Label>Matricula: </Form.Label>
-                    <Form.Control type="text" {...register('matricula')} />
+                    <Form.Control type="text" {...register('matricula', professoresValidator.matricula())} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="salario">
                     <Form.Label>Salario: </Form.Label>
-                    <Form.Control type="text" {...register('salario')} />
+                    <Form.Control type="text" {...register('salario', professoresValidator.salario())} />
                 </Form.Group>
 
                 <div className='text-center'>

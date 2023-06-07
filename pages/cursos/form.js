@@ -1,6 +1,6 @@
 import Pagina from '@/components/Pagina'
-import React, { useState } from 'react'
-import { Alert, Button, Form } from 'react-bootstrap'
+import React from 'react'
+import {  Button, Form } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
