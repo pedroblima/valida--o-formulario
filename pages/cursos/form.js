@@ -7,6 +7,9 @@ import Link from 'next/link'
 import { BsCheckLg } from 'react-icons/bs'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import cursoValidator from '@/validators/cursoValidator'
+import axios from 'axios'
+import { IMaskInput } from 'react-imask'
+
 
 const form = () => {
     
@@ -14,11 +17,10 @@ const form = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     function salvar(dados) {
-        const cursos = JSON.parse(window.localStorage.getItem('cursos')) || []
-        cursos.push(dados)
-        window.localStorage.setItem('cursos', JSON.stringify(cursos))
+        axios.post('/api/cursos', dados)
         push('/cursos')
     }
+
 
     return (
         <Pagina titulo="Curso">
@@ -26,7 +28,11 @@ const form = () => {
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome: </Form.Label>
-                    <Form.Control isInvalid={errors.nome} type="text" {...register('nome', cursoValidator.nome)} />
+                    <Form.Control                    
+                    isInvalid={errors.nome} 
+                    type="text" 
+                    placeholder='digite seu nome'
+                    {...register('nome', cursoValidator.nome)} />
                     {
                         errors.nome &&
                         <p className='text-danger'>{errors.nome.message}</p>
@@ -36,7 +42,13 @@ const form = () => {
 
                 <Form.Group className="mb-3" controlId="duracao">
                     <Form.Label>Duração: </Form.Label>
-                    <Form.Control isInvalid={errors.duracao} type="text" {...register('duracao', cursoValidator.duracao)} />
+                    <Form.Control 
+                    as={IMaskInput}
+                    mask='0 aaaaaaaaa'
+                    isInvalid={errors.duracao} 
+                    type="text" 
+                    placeholder='digite a duração'
+                    {...register('duracao', cursoValidator.duracao)} />
                     {
                         errors.duracao &&
                         <p className='text-danger'>{errors.duracao.message}</p>
@@ -45,7 +57,10 @@ const form = () => {
 
                 <Form.Group className="mb-3" controlId="modalidade">
                     <Form.Label>Modalidade: </Form.Label>
-                    <Form.Control isInvalid={errors.modalidade} type="text" {...register('modalidade', cursoValidator.modalidade )} />
+                    <Form.Control isInvalid={errors.modalidade}
+                    type="text" 
+                    placeholder='digite a modalidade'
+                    {...register('modalidade', cursoValidator.modalidade)} />
                     {
                         errors.modalidade &&
                         <p className='text-danger'>{errors.modalidade.message}</p>

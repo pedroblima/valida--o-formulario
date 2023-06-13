@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { BsCheckLg } from 'react-icons/bs'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import axios from 'axios'
+import salasValidator from '@/validators/salasValidator'
 
 const form = () => {
 
@@ -35,16 +36,38 @@ const form = () => {
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome: </Form.Label>
-                    <Form.Control type="text" {...register('nome')} />
+                    <Form.Control 
+                    isInvalid={errors.nome} 
+                    type="text" 
+                    placeholder='digite a nome'
+                    {...register('nome', salasValidator.nome)} />
+                    {
+                        errors.nome &&
+                        <p className='text-danger'>{errors.nome.message}</p>
+                    }
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="capacidade">
-                    <Form.Label>capacidade: </Form.Label>
-                    <Form.Control type="text" {...register('capacidade')} />
+                    <Form.Label>Capacidade: </Form.Label>
+                    <Form.Control isInvalid={errors.capacidade} 
+                    type="text" 
+                    placeholder='digite a capacidade'
+                    {...register('capacidade', salasValidator.capacidade)} />
+                    {
+                        errors.capacidade &&
+                        <p className='text-danger'>{errors.capacidade.message}</p>
+                    }
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="tipo">
                     <Form.Label>Tipo: </Form.Label>
-                    <Form.Control type="text" {...register('tipo')} />
+                    <Form.Control isInvalid={errors.tipo} 
+                    type="text" 
+                    placeholder='digite a tipo'
+                    {...register('tipo', salasValidator.tipo)} />
+                    {
+                        errors.tipo &&
+                        <p className='text-danger'>{errors.tipo.message}</p>
+                    }
                 </Form.Group>
 
                 <div className='text-center'>
@@ -52,7 +75,7 @@ const form = () => {
                         <BsCheckLg className="me-2" />
                         Salvar
                     </Button>
-                    <Link className="ms-2 btn btn-danger" href="/salas">
+                    <Link className="ms-2 btn btn-danger" href="/salass">
                         <AiOutlineArrowLeft className="me-2" />
                         Voltar
                     </Link>

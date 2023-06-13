@@ -21,19 +21,41 @@ const form = () => {
 
     return (
         <Pagina titulo="salas">
-            <Form>
+             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome: </Form.Label>
-                    <Form.Control type="text" {...register('nome', salasValidator.nome())} />
+                    <Form.Control 
+                    isInvalid={errors.nome} 
+                    type="text" 
+                    placeholder='digite a nome'
+                    {...register('nome', salasValidator.nome)} />
+                    {
+                        errors.nome &&
+                        <p className='text-danger'>{errors.nome.message}</p>
+                    }
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="capacidade">
                     <Form.Label>Capacidade: </Form.Label>
-                    <Form.Control type="text" {...register('capacidade', salasValidator.capacidade())} />
+                    <Form.Control isInvalid={errors.capacidade} 
+                    type="text" 
+                    placeholder='digite a capacidade'
+                    {...register('capacidade', salasValidator.capacidade)} />
+                    {
+                        errors.capacidade &&
+                        <p className='text-danger'>{errors.capacidade.message}</p>
+                    }
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="tipo">
                     <Form.Label>Tipo: </Form.Label>
-                    <Form.Control type="text" {...register('tipo', salasValidator.tipo())} />
+                    <Form.Control isInvalid={errors.tipo} 
+                    type="text" 
+                    placeholder='digite a tipo'
+                    {...register('tipo', salasValidator.tipo)} />
+                    {
+                        errors.tipo &&
+                        <p className='text-danger'>{errors.tipo.message}</p>
+                    }
                 </Form.Group>
 
                 <div className='text-center'>

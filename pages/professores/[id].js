@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { BsCheckLg } from 'react-icons/bs'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 import axios from 'axios'
+import professoresValidator from '@/validators/professoresValidator'
+import { productionBrowserSourceMaps } from '@/next.config'
 
 const form = () => {
 
@@ -31,16 +33,59 @@ const form = () => {
     }
 
     return (
-        <Pagina titulo="professors">
+        <Pagina titulo="professores">
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome: </Form.Label>
-                    <Form.Control type="text" {...register('nome')} />
+                    <Form.Control 
+                    isInvalid={errors.nome} 
+                    type="text" 
+                    placeholder='digite a duração'
+                    {...register('nome', professoresValidator.nome)} />
+                    {
+                        errors.nome &&
+                        <p className='text-danger'>{errors.nome.message}</p>
+                    }
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="curso">
-                    <Form.Label>Curso: </Form.Label>
-                    <Form.Control type="text" {...register('curso')} />
+                <Form.Group className="mb-3" controlId="cpf">
+                    <Form.Label>CPF: </Form.Label>
+                    <Form.Control as={IMaskInput}
+                    mask='000.000.000-00'
+                    isInvalid={errors.cpf} 
+                    type="text" 
+                    placeholder='digite a cpf'
+                    {...register('cpf', professoresValidator.cpf)} />
+                    {
+                        errors.cpf &&
+                        <p className='text-danger'>{errors.cpf.message}</p>
+                    }
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="matricula">
+                    <Form.Label>Matricula: </Form.Label>
+                    <Form.Control as={IMaskInput}
+                    mask='00000000000'
+                    isInvalid={errors.matricula} 
+                    type="text" 
+                    placeholder='digite a duração'
+                    {...register('matricula', professoresValidator.matricula)} />
+                    {
+                        errors.matricula &&
+                        <p className='text-danger'>{errors.matricula.message}</p>
+                    }
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="salario">
+                    <Form.Label>Salario: </Form.Label>
+                    <Form.Control as={IMaskInput}
+                    mask='00000000,00'
+                    isInvalid={errors.salario} 
+                    type="text" 
+                    placeholder='digite a duração'
+                    {...register('salario', professoresValidator.salario)} />
+                    {
+                        errors.salario &&
+                        <p className='text-danger'>{errors.salario.message}</p>
+                    }
                 </Form.Group>
 
                 <div className='text-center'>
