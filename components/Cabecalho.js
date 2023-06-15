@@ -7,15 +7,13 @@ const Cabecalho = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/cursos">Acadêmico</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link className='nav-link' href="/cursos">Cursos</Nav.Link>
-            <Nav.Link className='nav-link' href="/disciplinas">Disciplinas</Nav.Link>
-            <Nav.Link className='nav-link' href="/alunos">Alunos</Nav.Link>
-            <Nav.Link className='nav-link' href="/professores">Professores</Nav.Link>
-            <Nav.Link className='nav-link' href="/turmas">Turmas</Nav.Link>
-            <Nav.Link className='nav-link' href="/salas">Salas</Nav.Link>
-            <Nav.Link className='nav-link' href="/semestres">Semestres</Nav.Link>
+          <Navbar.Brand href="/">CPC</Navbar.Brand>
+          <Nav className="me-auto">           
+            <Nav.Link className='nav-link' href="/PMERJ">PMERJ</Nav.Link>
+            <Nav.Link className='nav-link' href="/PCDF">PCDF</Nav.Link>
+            <Nav.Link className='nav-link' href="/PMDF">PMDF</Nav.Link>
+            <Nav.Link className='nav-link' href="/SPTC">SPTC</Nav.Link>
+            <Nav.Link className='nav-link' href="/PF">PF</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
