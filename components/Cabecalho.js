@@ -9,11 +9,11 @@ const Cabecalho = () => {
         <Container>
           <Navbar.Brand href="/">CPC</Navbar.Brand>
           <Nav className="me-auto">           
-            <Nav.Link className='nav-link' href="/PMERJ">PMERJ</Nav.Link>
-            <Nav.Link className='nav-link' href="/PCDF">PCDF</Nav.Link>
-            <Nav.Link className='nav-link' href="/PMDF">PMDF</Nav.Link>
-            <Nav.Link className='nav-link' href="/SPTC">SPTC</Nav.Link>
-            <Nav.Link className='nav-link' href="/PF">PF</Nav.Link>
+            <Nav.Link className='nav-link' href="/avaliacao">Avaliação de Necessidades</Nav.Link>
+            <Nav.Link className='nav-link' href="/preferencia">Preferencia de Estudo</Nav.Link>
+            <Nav.Link className='nav-link' href="/acompanhamento">Acompanhamento de Progresso</Nav.Link>
+            <Nav.Link className='nav-link' href="/feedback">FeedBack de Aulas</Nav.Link>
+            <Nav.Link className='nav-link' href="/recurso">Recurso de estudo</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
