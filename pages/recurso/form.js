@@ -21,8 +21,8 @@ const form = () => {
     const opcoesRecursos = ['Livros', 'Apostilas', 'VideosAulas', 'Aplicativos', 'Simulados'];
 
     const salvar = (dados) => {
-        dados.recurso = recursosSelecionados;
-        dados.recursos = eficienteSelecionados;
+        dados.recurso = recursosSelecionados.join(', ')
+        dados.recursos = eficienteSelecionados.join(', ')
         axios.post('/api/recurso', dados);
         push('/recurso');
     };

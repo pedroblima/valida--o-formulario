@@ -18,7 +18,7 @@ const form = () => {
     const opcoesRecursos = ['Livros', 'Vídeos', 'Aulas presenciais', 'Aulas online', 'Simulados'];
 
     const salvar = (dados) => {
-        dados.recursos = recursosSelecionados; 
+        dados.recursos = recursosSelecionados.join(', '); 
         axios.post('/api/preferencia', dados);
         push('/preferencia');
     };
@@ -38,7 +38,7 @@ const form = () => {
 
 
     return (
-        <Pagina titulo="preferencia">
+        <Pagina titulo="Preferencia">
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome Completo: </Form.Label>

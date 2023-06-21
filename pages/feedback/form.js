@@ -34,7 +34,7 @@ const form = () => {
     }
 
     return (
-        <Pagina titulo="feedback">
+        <Pagina titulo="Feedback">
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome Completo: </Form.Label>
@@ -63,7 +63,7 @@ const form = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="aula">
-                    <Form.Label>Qual foi a aula mais Util que voce Participou? </Form.Label>
+                    <Form.Label>O Que Voce Achou do curso? </Form.Label>
                     <Form.Control
                     isInvalid={errors.aula}
                     type='text'

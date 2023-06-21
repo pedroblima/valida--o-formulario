@@ -34,7 +34,7 @@ const form = () => {
 
 
     const salvar = (dados) => {
-        dados.recursos = recursosSelecionados; // Adiciona os recursos selecionados ao objeto de dados
+        dados.recursos = recursosSelecionados.join(', '); // Adiciona os recursos selecionados ao objeto de dados
         axios.post('/api/preferencia', dados);
         push('/preferencia');
     };
@@ -54,7 +54,7 @@ const form = () => {
 
 
     return (
-        <Pagina titulo="preferencia">
+        <Pagina titulo="Preferencia">
             <Form>
                 <Form.Group className="mb-3" controlId="nome">
                     <Form.Label>Nome Completo: </Form.Label>

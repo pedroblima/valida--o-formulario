@@ -34,8 +34,8 @@ const form = () => {
     
     
     const salvar = (dados) => {
-        dados.recursos = recursosSelecionados;
-        dados.recurso = eficienteSelecionados;
+        dados.recurso = recursosSelecionados.join(', ')
+        dados.recursos = eficienteSelecionados.join(', ')
         axios.post('/api/recurso', dados);
         push('/recurso');
     };

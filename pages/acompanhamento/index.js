@@ -28,7 +28,7 @@ const index = () => {
     }
 
     return (
-        <Pagina titulo="acompanhamento">
+        <Pagina titulo="Acompanhamento">
 
             <Link href="/acompanhamento/form" className='mb-2 btn btn-primary'>
                 Novo
