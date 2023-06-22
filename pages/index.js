@@ -35,7 +35,7 @@ const Index = () => {
     }
     return (
         <Pagina titulo="Curso Preparatório para Concurso">
-            <div className="jumbotron">
+            <div className="jumbotron text-white">
                 <h1>Bem-vindo ao Curso Preparatório para Concurso</h1>
                 <p>
                     Aqui você encontrará o melhor conteúdo e suporte para se preparar e
@@ -43,9 +43,9 @@ const Index = () => {
                 </p>
             </div>
 
-            <h2>Próximos Cursos</h2>
+            <h2 className='text-white'>Próximos Cursos</h2>
             <Table striped bordered>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>Concurso</th>
                         <th>Data</th>
@@ -53,13 +53,13 @@ const Index = () => {
                         <th>Faça Sua inscrição</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody className='text-white'>
+                    <tr >
                         <td>
                             <a href='https://concursosnobrasil.com/concurso/concurso-core-df/'>CORE DF</a>
                         </td>
-                        <td>06/07/2023</td>
-                        <td>Brasilia/DF</td>
+                        <td className='text-white'>06/07/2023</td>
+                        <td className='text-white'>Brasilia/DF</td>
                         <td>
                             <a href='https://www.institutoconsulplan.org.br/getConc.aspx?key=1Xt0KYAD7qA='>clique aqui</a>
                         </td>
@@ -68,9 +68,9 @@ const Index = () => {
                         <td>
                             <a href='https://concursosnobrasil.com/concurso/concurso-exercito-brasileiro/'>ESFCEx</a>
                         </td>
-                        <td>12/06/2023</td>
-                        <td>Brasil</td>
-                        <td>
+                        <td className='text-white'>12/06/2023</td>
+                        <td >Brasil</td>
+                        <td >
                             <a href='https://www.vunesp.com.br/EFCE2301'>clique aqui</a>
                         </td>
                     </tr>
@@ -78,8 +78,8 @@ const Index = () => {
                         <td>
                             <a href='https://concursosnobrasil.com/concurso/vagas-de-estagio-no-ministerio-da-justica-e-seguranca-publica/'>MJSP</a>
                         </td>
-                        <td>13/07/2023</td>
-                        <td>Brasilia/DF</td>
+                        <td className='text-white'>13/07/2023</td>
+                        <td className='text-white'>Brasilia/DF</td>
                         <td>
                             <a href='https://pp.ciee.org.br/vitrine/10176/detalhe'>clique aqui</a>
                         </td>
@@ -89,12 +89,12 @@ const Index = () => {
             <Row>
                 <Col>
 
-                    <h2>Depoimentos</h2>
+                    <h2 className='text-white'>Depoimentos</h2>
                     <div className="card-deck">
                         {feedback.map((item, index) => (
                             <div key={index} className="card">
                                 <div className="card-body">
-                                    <h5 className="card-title">{item.nome} </h5>
+                                    <h5 className="card-title ">{item.nome} </h5>
                                     <p className="card-text">{item.aula}</p>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ const Index = () => {
                 </Col>
 
                 <Col>
-                    <h2>Cursos Mais Proucurados</h2>
+                    <h2 className='text-white'>Cursos Mais Proucurados</h2>
                     <div className="card-deck">
                         {avaliacao.map((item, index) => (
                             <div key={index} className="card">
@@ -115,7 +115,7 @@ const Index = () => {
                     </div>
                 </Col>
                 <Col>
-                    <h2>Materias mais ultilizados</h2>
+                    <h2 className='text-white'>Materiais mais ultilizados</h2>
                     <div className="card-deck">
                         {recursos.map((item, index) => (
                             <div key={index} className="card">

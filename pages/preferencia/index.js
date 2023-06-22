@@ -28,14 +28,14 @@ const index = () => {
     }
 
     return (
-        <Pagina titulo="Preferencia">
+        <Pagina titulo="Preferencia" >
 
             <Link href="/preferencia/form" className='mb-2 btn btn-primary'>
                 Novo
             </Link>
 
             <Table striped bordered hover>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
@@ -55,11 +55,11 @@ const index = () => {
                                 {' '}
                                 <BsFillTrash3Fill title="Excluir" onClick={() => excluir(item.id)} className='text-danger' />
                             </td>
-                            <td>{item.nome}</td>
-                            <td>{item.email}</td>
-                            <td>{item.preferido}</td>
-                            <td>{item.estuda}</td>
-                            <td>{item.recursos}</td>
+                            <td className='text-white'>{item.nome}</td>
+                            <td className='text-white'>{item.email}</td>
+                            <td className='text-white'>{item.preferido}</td>
+                            <td className='text-white'>{item.estuda}</td>
+                            <td className='text-white'>{item.recursos}</td>
                         </tr>
                     ))}
                 </tbody>

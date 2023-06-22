@@ -35,7 +35,7 @@ const index = () => {
             </Link>
 
             <Table striped bordered hover>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
@@ -45,7 +45,7 @@ const index = () => {
                         <th>nivel de confiança nas materias</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='text-white'>
                     {acompanhamento.map(item => (
                         <tr key={item.id}>
                             <td>
@@ -55,11 +55,11 @@ const index = () => {
                                 {' '}
                                 <BsFillTrash3Fill title="Excluir" onClick={() => excluir(item.id)} className='text-danger' />
                             </td>
-                            <td>{item.nome}</td>
-                            <td>{item.email}</td>
-                            <td>{item.materia}</td>
-                            <td>{item.dedicou}</td>
-                            <td>{item.escala}</td>
+                            <td className='text-white'>{item.nome}</td>
+                            <td className='text-white'>{item.email}</td>
+                            <td className='text-white'>{item.materia}</td>
+                            <td className='text-white'>{item.dedicou}</td>
+                            <td className='text-white'>{item.escala}</td>
                         </tr>
                     ))}
                 </tbody>

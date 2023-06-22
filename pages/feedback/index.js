@@ -35,7 +35,7 @@ const index = () => {
             </Link>
 
             <Table striped bordered hover>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
@@ -45,7 +45,7 @@ const index = () => {
                         <th>Topicos para ser abordado nas proximas aulas</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='text-white'>
                     {feedback.map(item => (
                         <tr key={item.id}>
                             <td>
@@ -55,11 +55,11 @@ const index = () => {
                                 {' '}
                                 <BsFillTrash3Fill title="Excluir" onClick={() => excluir(item.id)} className='text-danger' />
                             </td>
-                            <td>{item.nome}</td>
-                            <td>{item.email}</td>
-                            <td>{item.aula}</td>
-                            <td>{item.comentario}</td>
-                            <td>{item.topicos}</td>
+                            <td className='text-white'>{item.nome}</td>
+                            <td className='text-white'>{item.email}</td>
+                            <td className='text-white'>{item.aula}</td>
+                            <td className='text-white'>{item.comentario}</td>
+                            <td className='text-white'>{item.topicos}</td>
                         </tr>
                     ))}
                 </tbody>

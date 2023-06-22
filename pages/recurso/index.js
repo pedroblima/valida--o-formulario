@@ -35,7 +35,7 @@ const index = () => {
             </Link>
 
             <Table striped bordered hover>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
@@ -55,11 +55,11 @@ const index = () => {
                                 {' '}
                                 <BsFillTrash3Fill title="Excluir" onClick={() => excluir(item.id)} className='text-danger' />
                             </td>
-                            <td>{item.nome}</td>
-                            <td>{item.email}</td>
-                            <td>{item.adicional}</td>
-                            <td>{item.recursos}</td>
-                            <td>{item.recurso}</td>
+                            <td className='text-white'>{item.nome}</td>
+                            <td className='text-white'>{item.email}</td>
+                            <td className='text-white'>{item.adicional}</td>
+                            <td className='text-white'>{item.recursos}</td>
+                            <td className='text-white'>{item.recurso}</td>
                         </tr>
                     ))}
                 </tbody>

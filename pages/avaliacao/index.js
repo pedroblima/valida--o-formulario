@@ -35,7 +35,7 @@ const index = () => {
             </Link>
 
             <Table striped bordered hover>
-                <thead>
+                <thead className='text-white'>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
@@ -47,7 +47,7 @@ const index = () => {
                 </thead>
                 <tbody>
                     {avaliacao.map(item => (
-                        <tr key={item.id}>
+                        <tr key={item.id} className='text-white' >
                             <td>
                                 <Link href={'/avaliacao/' + item.id}>
                                     <BsPencilFill title="Alterar" className='text-primary' />
@@ -55,11 +55,11 @@ const index = () => {
                                 {' '}
                                 <BsFillTrash3Fill title="Excluir" onClick={() => excluir(item.id)} className='text-danger' />
                             </td>
-                            <td>{item.nome}</td>
-                            <td>{item.email}</td>
-                            <td>{item.pretende}</td>
-                            <td>{item.nivel}</td>
-                            <td>{item.dificuldade}</td>
+                            <td className='text-white'>{item.nome}</td>
+                            <td className='text-white'>{item.email}</td>
+                            <td className='text-white'>{item.pretende}</td>
+                            <td className='text-white'>{item.nivel}</td>
+                            <td className='text-white'>{item.dificuldade}</td>
                         </tr>
                     ))}
                 </tbody>
