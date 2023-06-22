@@ -115,7 +115,7 @@ const Index = () => {
                     </div>
                 </Col>
                 <Col>
-                    <h2>Materiais mais ultilizados</h2>
+                    <h2 className='text-white'>Materiais mais ultilizados</h2>
                     <div className="card-deck">
                         {recursos.map((item, index) => (
                             <div key={index} className="card">
