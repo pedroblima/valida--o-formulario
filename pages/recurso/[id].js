@@ -128,7 +128,7 @@ const form = () => {
                             type="checkbox"
                             label={recurso}
                             name="recursos"
-                            value={recursos}
+                            value={recurso}
                             checked={eficienteSelecionados.includes(recurso)}
                             onChange={handleCheckboxChanges}
                         />

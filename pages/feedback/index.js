@@ -28,7 +28,7 @@ const index = () => {
     }
 
     return (
-        <Pagina titulo="Ffeedback">
+        <Pagina titulo="Feedback">
 
             <Link href="/feedback/form" className='mb-2 btn btn-primary'>
                 Novo
