@@ -22,7 +22,7 @@ const Cabecalho = () => {
           </Nav>
           <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Faça seu Cadastro: <a href="/login/form">Cadastro</a>
+            Faça seu Cadastro: <a href="/login/form">Cadastro</a>       , <a href="/login/form">Login</a>
           </Navbar.Text>
         </Navbar.Collapse>
         </Container>
